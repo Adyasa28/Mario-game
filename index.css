@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  font-family: monospace;
+  text-align: center;
+}
+
+.game{
+
+    width: 800px;
+    height: 400px;
+    background-color: skyblue;
+  
+   
+    
+     margin: 30px auto;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 4px solid #111;
+    border-radius: 10px;
+
+    border-bottom: 50px solid #3a9d23;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+}
+.mario {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+
+    z-index: 5;
+}
+
+.mario img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.obstacle {
+    width: 25px;
+    height: 50px;
+
+    background: linear-gradient(
+        to right,
+        #641818,
+        #a83232,
+        #641818
+    );
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    border-radius: 5px 5px 0 0;
+    border: 2px solid #421010;
+
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+.score {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 8px 15px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    color: #111;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    z-index: 10;
+}
+
+
+.game-over{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 13, 13, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 20;  
+}
+.game-over h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.game-over button {
+    padding: 12px 30px;
+
+    font-family: monospace;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    background-color: #e53935;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 0 #9b1c1c;
+
+    transition: 0.2s;
+}
+
+.game-over button:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+}
+
+.game-over button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #9b1c1c;
+} 
+
+
+
+
+@media (max-width: 850px) {
+    .game {
+        width: 95%;
+    }
+}
+ 
